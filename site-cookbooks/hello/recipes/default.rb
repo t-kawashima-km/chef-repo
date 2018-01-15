@@ -40,12 +40,6 @@ template "/etc/profile.d/rbenv.sh" do
   action :create
 end
 
-# bashの環境変数を有効に
-bash "exec shell" do
-  code "exec $SHELL"
-  action :run
-end
-
 # rubyのインストール
 # http://docs.getchef.com/resource_bash.html
 bash "install-ruby-with-rbenv" do
